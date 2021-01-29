@@ -13,7 +13,8 @@ public class Punto {
      * Se inicializan los atributos de clase
      */
     public Punto(double x, double y) {
-
+        this.x =x;
+        this.y = y;
     }
 
     /**
@@ -22,7 +23,7 @@ public class Punto {
      * @return eje coordenado x
      */
     public double x() {
-
+        return x;
     }
 
     /**
@@ -31,7 +32,7 @@ public class Punto {
      * @return eje coordenado y
      */
     public double y() {
-
+        return y;
     }
 
     /**
