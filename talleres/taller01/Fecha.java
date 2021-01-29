@@ -29,10 +29,10 @@ public class Fecha {
     /**
      * Se inicializan las variables globales en el constructor de manera que no posean valores nulos o 0s.
      */
-    public Fecha(int d, int m, int a){
-        this.d = d;
-        this.m = m;
-        this.a = a;
+    public Fecha(int dia, int mes, int anyo){
+        this.dia = dia;
+        this.mes = mes;
+        this.anyo = anyo;
 
     }
 
@@ -42,7 +42,7 @@ public class Fecha {
      * @return el dia
      */
     public int dia() {
-        return d;
+        return dia;
     }
 
     /**
@@ -51,7 +51,7 @@ public class Fecha {
      * @return el mes
      */
     public int mes() {
-        return m;
+        return mes;
     }
 
     /**
@@ -60,7 +60,7 @@ public class Fecha {
      * @return el año
      */
     public int anio() {
-        return a;
+        return anyo;
     }
 
     /**
@@ -76,9 +76,22 @@ public class Fecha {
     */
 
     public int comparar(Fecha otra) {
-        
+        if(this.anyo<otra.anyo){
+            return -1;
+        }elseif(this.anyo>otra.anyo){
+            return 1;
+        }if(this.mes<otra.mes){
+            return -1;
+        }elseif(this.mes>otra.mes){
+            return 1;
+        }if(this.dia<otra.dia){
+            return -1;
+        }elseif(this.dia>otra.dia){
+            return 1;
+        }else{
+            return 0;
+        }
     }
-
 
      /**
     * toString se encargará de convertir el tipo abstracto fecha en un tipo cadena
@@ -87,6 +100,8 @@ public class Fecha {
     * @return una cadena que contiene la fecha
     */
     public String toString() {
-        
+        String date = "";
+        date = this.dia+"/"+this.mes+"/"+this.anyo;
+        return date;
     }
 }
