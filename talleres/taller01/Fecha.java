@@ -4,22 +4,11 @@
  * @see <a href="http://www.baeldung.com/java-8-date-time-intro"> Ver documentacion tipo Time </a>
  * En este ejercicio podemos tener una compresión más profunda de su funcionamiento interno.
  * 
- * @author Mauricio Toro, Andres Paez
+ * @author Brigith Giraldo, Luisa Ciro
  * @version 1
  */
 
 public class Fecha {
-    
-
-    /*
-
-    varibales con atributo final indican que una variable es de tipo 
-    constante, es decir, no admitirá cambios después de su declaración y asignación de valor.
-    final determina que un atributo no puede ser sobreescrito o redefinido.
-    Se le asigna esta característica para evitar que se sobrescriban valores.
-
-    tener en cuenta tipado de las 3 variables!.
-    */
 
     private final int dia;
     private final int mes;
@@ -33,7 +22,6 @@ public class Fecha {
         this.dia = dia;
         this.mes = mes;
         this.anyo = anyo;
-
     }
 
     /**
