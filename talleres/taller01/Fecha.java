@@ -29,7 +29,10 @@ public class Fecha {
     /**
      * Se inicializan las variables globales en el constructor de manera que no posean valores nulos o 0s.
      */
-    public Fecha() {
+    public Fecha(int d, int m, int a){
+        this.d = d;
+        this.m = m;
+        this.a = a;
 
     }
 
@@ -39,7 +42,7 @@ public class Fecha {
      * @return el dia
      */
     public int dia() {
-
+        return d;
     }
 
     /**
@@ -48,7 +51,7 @@ public class Fecha {
      * @return el mes
      */
     public int mes() {
-
+        return m;
     }
 
     /**
@@ -57,7 +60,7 @@ public class Fecha {
      * @return el año
      */
     public int anio() {
-
+        return a;
     }
 
     /**
@@ -73,7 +76,7 @@ public class Fecha {
     */
 
     public int comparar(Fecha otra) {
-
+        
     }
 
 
