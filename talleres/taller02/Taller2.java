@@ -1,9 +1,5 @@
 /**
-*La clase taller dos tiene como objetivo dar solución
-*a 3 problemas recursivos
-*
-*@autor Mauricio Toro, Camilo Paez
-*@version 1
+*@autor Brigith Giraldo, Luisa Ciro
 */
 
 public class Taller2 {
@@ -20,7 +16,10 @@ public class Taller2 {
     * @return el máximo común divisor
     */
     public static int gcd(int p, int q){
-        
+        if (p % q == 0){
+            return q;
+        }
+        return gcd(q, p % q);
     }
 
     /**
