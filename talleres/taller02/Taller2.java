@@ -15,11 +15,17 @@ public class Taller2 {
     *
     * @return el máximo común divisor
     */
-    public static int gcd(int p, int q){
-        if (p % q == 0){
-            return q;
-        }
-        return gcd(q, p % q);
+     public static int gcd(int p, int q){
+            if (p > q) return gcdAUX(p,q);
+            //else
+            return gcdAUX(q,p);
+    }
+
+    private static int gcdAUX(int p, int q){
+        if (p % q == 0) //   if (q == 0)
+          return q;     //       return p;
+                //else
+                return gcd(q, p % q);
     }
 
     /**
@@ -38,7 +44,7 @@ public class Taller2 {
             boolean respuestaSi = groupSum(start+1,nums,target - nums[start]);
             boolean respuestaNo = groupSum(start+1,nums,target);
             return respuestaSi || respuestaNo;
-    }​​​
+    }
   
     
     /**
