@@ -72,14 +72,17 @@ public class Taller3 {
 	*
 	*/
 	private static void permutationAux(String prefix, String str) {
-		int n = str.length();
-		if(n == 0){
-			System.out.println(prefix);
+		if (str.length() == 0) { 
+			System.out.println(prefix + " "); 
+			return;
 		}
-		else{
-			
-		}
-	}
+		 for (int i = 0; i < str.length(); i++) { 
+			 char ch = str.charAt(i); 
+			 String ros = str.substring(0, i) + str.substring(i + 1); 
+			 printPermutn(ros, prefix + ch);
+		 }		
 		
-	
+	}
+  
+       
 }
