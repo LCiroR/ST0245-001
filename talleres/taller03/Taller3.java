@@ -42,7 +42,7 @@ public class Taller3 {
 		}
 		else{
 			torresDeHannoiAux(n-1, origen, destino, intermedio);
-			System.out.println("Mover disco "+n+"de torre"+origen+"a"+destino. Fin del juego");
+			System.out.println("Mover disco "+n+"de torre"+origen+"a"+destino");
 			torresDeHannoiAux(n-1, intermedio, origen, destino);		   
 					
 		}
