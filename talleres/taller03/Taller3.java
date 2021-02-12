@@ -38,11 +38,12 @@ public class Taller3 {
 	
 	private static void torresDeHannoiAux(int n, int origen, int intermedio, int destino) {
 		if(num==1){
-			System.out.println("Mover disco 1 de torre"+origen+"a"+destino. Fin del juego");
+			System.out.println("Disk 1 from" + origen + "to" + destino);
+			return;
 		}
 		else{
 			torresDeHannoiAux(n-1, origen, destino, intermedio);
-			System.out.println("Mover disco "+n+"de torre"+origen+"a"+destino");
+			System.out.println("Disk" + n + "from" + origen + "to" + destino");
 			torresDeHannoiAux(n-1, intermedio, origen, destino);		   
 					
 		}
