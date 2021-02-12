@@ -3,7 +3,7 @@ package Taller__3;
 *
 * La clase Taller3 tiene como objtivo dar solución a los puntos del taller 3
 *
-* @author Mauricio Toro, Andrés Páez
+* @author Brigith Giraldo, Luisa Ciro
 * @version 1
 */
 
@@ -37,16 +37,17 @@ public class Taller3 {
 	*/	
 	
 	private static void torresDeHannoiAux(int n, int origen, int intermedio, int destino) {
-		if (n == 1){
-			System.out.println("Disk "+ 1 + " from "+ origen + " to "+ destino);
-			return;
+		if(num==1){
+			System.out.println("Mover disco 1 de torre"+origen+"a"+destino. Fin del juego");
 		}
-		torresDeHannoiAux(n-1, origen, intermedio, destino);
-		System.out.println("Disk "+ n + " from "+ origen + " to "+ destino);
-		torresDeHannoiAux(n-1, intermedio, origen, destino);
+		else{
+			torresDeHannoiAux(n-1, origen, destino, intermedio);
+			System.out.println("Mover disco "+n+"de torre"+origen+"a"+destino. Fin del juego");
+			torresDeHannoiAux(n-1, intermedio, origen, destino);		   
+					
+		}
 	}
-		
-
+	
 		
 	/**
 	*
