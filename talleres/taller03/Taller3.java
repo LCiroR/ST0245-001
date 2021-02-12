@@ -37,7 +37,13 @@ public class Taller3 {
 	*/	
 	
 	private static void torresDeHannoiAux(int n, int origen, int intermedio, int destino) {
-		//...
+		if (n == 1){
+			System.out.println("Disk "+ 1 + " from "+ origen + " to "+ destino);
+			return;
+		}
+		torresDeHannoiAux(n-1, origen, intermedio, destino);
+		System.out.println("Disk "+ n + " from "+ origen + " to "+ destino);
+		torresDeHannoiAux(n-1, intermedio, origen, destino);
 	}
 		
 
