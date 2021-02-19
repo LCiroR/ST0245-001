@@ -8,16 +8,28 @@ public class Taller4 {
     
     /**
 	* @param array es un arreglo de numeros enteros
-	* @param n la longitud del array anterior 
+	* @param i primera posicion del arreglo
+	* @param j ultima posicion del arreglo
 	*
-	*en este método se busca hacer la suma de los numeros en un
-	*arreglo de forma recursiva.
+	*en este método se busca calcular el maximo de los elementos de un arreglo.
 	*
-	* @return la suma
+	* @return el maximo
 	*/
-	public static int arrayMax(int[] array, int n) {
-		//...
-	}
+	public static int arrayMax(int[] array, int i, int j) {
+		int med, max_left, max_right;
+		if (i == j) {
+		    return array[i];
+		} else {
+		     med = (i + j) / 2;
+                     max_left = arrayMax(array, i, med);
+                     max_right = arrayMax(array, med + 1, j);
+                     if (max_left > max_right){  
+			     return max_left;
+		     } else {
+			     return max_right;	
+		           }
+       
+		}
     
     /**
 	* @param start es un contador, nos sirve para saber cuando debemos parar
