@@ -6,8 +6,6 @@
  */
 
 public class Taller5 {  
-    
-    
 
     /**
     * @param array es una arreglo de numeros enteros.
@@ -16,8 +14,8 @@ public class Taller5 {
     * @return la suma de todos los numeros sumados.
     */
     public static int suma (int[]array){
-        int sum=0;
-	       for(int i=0;i< __________ ;i++){
+          int sum=0;
+	       for(int i=0;i< array.length;i++){
             sum+=array[i];
          }
          return sum;
@@ -32,8 +30,8 @@ public class Taller5 {
     * 
     */
     public static void mul (int num){
-        for(int i=1;i<=10;i++){
-	           System.out.println(num+" x "+i+" = "+( ____ ));
+          for(int i=1;i<=10;i++){
+	           System.out.println(num+" x "+i+" = "+(i*num));
 	        }
     }
     
@@ -47,10 +45,10 @@ public class Taller5 {
     * 
     */
     public static int[] insertionSort (int[] array){
-     int j=0;
+        int j=0;
 	    int temp=0;
 	    for(int i=0;i<array.length;i++){
-         _____ = i;
+	        _____ = i;
 	        _____ = array[j];
 	        while(j > 0 _____ array[ ____ ] > temp){
 		           array[j] = array[j-1];
@@ -59,6 +57,6 @@ public class Taller5 {
 	        array[j] = temp;
 	    }
 	    return array;
-        
+       
     }    
 }
