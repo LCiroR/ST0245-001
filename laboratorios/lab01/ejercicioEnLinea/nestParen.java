@@ -1,3 +1,6 @@
+/**
+* Given a string, return true if it is a nesting of zero or more pairs of parenthesis, like "(())" or "((()))"
+*/
 public class nestParen{
   
     public boolean nestParen(String str) {
