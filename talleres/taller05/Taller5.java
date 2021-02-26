@@ -45,16 +45,15 @@ public class Taller5 {
     * 
     */
     public static int[] insertionSort (int[] array){
-        int j=0;
-	    int temp=0;
-	    for(int i=0;i<array.length;i++){
-	        _____ = i;
-	        _____ = array[j];
-	        while(j > 0 _____ array[ ____ ] > temp){
-		           array[j] = array[j-1];
-		           j __ ;
+        int i, temp, j;
+	for(i = 0;i<array.length;i++){
+	        j = i-1;
+	        temp = array[i];
+	        while(j > 0 && array[j] > temp){
+		           array[j + 1] = array[j];
+		           j = j-1;
 	        }
-	        array[j] = temp;
+	        array[j + 1] = temp;
 	    }
 	    return array;
        
