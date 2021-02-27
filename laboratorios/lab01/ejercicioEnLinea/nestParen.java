@@ -1,18 +1,12 @@
-/**
-* Given a string, return true if it is a nesting of zero or more pairs of parenthesis, like "(())" or "((()))"
-*/
-public class nestParen{
-  
-    public boolean nestParen(String str) {
-
-        if(str.length() <= 1) return true;
-
-        if(str.length()%2 == 0){
-            if(str.charAt(0) == '(' && str.charAt(str.length() - 1) == ')')
-                return nestParen(str.substring(1,str.length()-1));
-            return false;
+// We have a number of bunnies and each bunny has two big floppy ears.
+//We want to compute the total number of ears across all the bunnies recursively
+   
+public class bunnyEars {
+    
+    public static int bunnyEars(int bunnies) {
+        if (bunnies == 0){
+          return 0;
         }
-        return false;
+        return bunnyEars(bunnies-1) + 2;
     }
-
 }
