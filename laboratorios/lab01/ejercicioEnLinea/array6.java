@@ -1,6 +1,6 @@
 /**
 * Given an array of ints, compute recursively if the array contains a 6
-/*
+*/
 public class array6{
   
     public boolean array6(int[] nums, int index) {
