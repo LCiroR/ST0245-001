@@ -9,7 +9,7 @@ public boolean canBalance(int[] nums) {
   for(int i = 0; i < nums.length; i++){
     seg += nums[i];
   }
-  for(int i = 0; i <= nums.length - 2; i++) {
+  for(int i = 0; i <= nums.length - 1; i++) {
     prim += nums[i];
     seg -= nums[i];
     if(prim == seg){
