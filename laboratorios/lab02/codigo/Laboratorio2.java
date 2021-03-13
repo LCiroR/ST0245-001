@@ -1,3 +1,6 @@
+// Toro.M (2020) Laboratorio2 source code (Version 1) [source code].
+// https://github.com/mauriciotoro/ST0245-Eafit/blob/master/laboratorios/lab02/spoiler/java/Laboratorio2.java
+
 import java.util.Arrays;
 
 public class Laboratorio2{
