@@ -1,3 +1,7 @@
+/**
+* We'll say that a "mirror" section in an array is a group of contiguous elements such that somewhere in the array, 
+* the same group appears in reverse order. Return the size of the largest mirror section found in the given array
+*/
 public int maxMirror(int[] nums) {
   int cont = 0;
   int max = 0;
