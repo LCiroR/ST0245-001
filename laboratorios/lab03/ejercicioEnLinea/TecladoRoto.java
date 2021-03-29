@@ -1,6 +1,4 @@
 /**
- * Write a description of class n here.
- * 
  * @author (Brigith Giraldo, Luisa Ciro) 
  * @version 1
  */
