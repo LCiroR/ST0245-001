@@ -39,5 +39,7 @@ public class UnaTablaDeHash
    * Este método se utiliza para agregar un nuevo elemento
    */
    public void put(String k, int v){
+       int posicion = funcionHash(k);
+       tabla[posicion] = v;
    }
 }
