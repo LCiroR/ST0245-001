@@ -1,4 +1,7 @@
 import os
+import pandas as pd
+import numpy as np
+import cv2
 
 def leer_archivo(path_archivo):
     """
@@ -20,8 +23,9 @@ def leer_archivo(path_archivo):
 
 
 def main():
-    path_directorio_archivos = 'C:/Users/LFCIR/OneDrive/Documentos/ST0245-001/proyecto/datasets/archivosCSV/ganado enfermo CSVs'
+    path_directorio_archivos = 'C:/Users/LFCIR/Documents/ST0245-001/proyecto/datasets/archivosCSV/ganado enfermo CSVs'  
     imagenes = []
+    imagenes_escaladas = []
     
     directorio = os.fsencode(path_directorio_archivos)
 
@@ -29,9 +33,11 @@ def main():
         nombre_archivo = os.fsdecode(archivo)
         path_archivo = path_directorio_archivos + '/' + nombre_archivo
         imagen = leer_archivo(path_archivo)
-        imagenes.append(imagen)
+        imagen = np.uint8(imagen)
+        imagen_escalada = cv2.resize(imagen, (0, 0), fx=0.5, fy=0.5, interpolation=cv2.INTER_NEAREST)
 
-    print('Se leyeron {0} imagenes'.format(len(imagenes)))
+        imagenes.append(imagen)
+        imagenes_escaladas.append(imagen_escalada)
 
 
 if __name__ == "__main__":
