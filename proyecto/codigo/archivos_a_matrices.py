@@ -3,6 +3,10 @@ import pandas as pd
 import numpy as np
 import cv2
 
+imagenes = []
+imagenes_escaladas = []
+imagenes_des = []
+
 def leer_archivo(path_archivo):
     """
         Recibe el path del archivo csv (string).
@@ -24,8 +28,7 @@ def leer_archivo(path_archivo):
 
 def main():
     path_directorio_archivos = 'C:/Users/LFCIR/Documents/ST0245-001/proyecto/datasets/archivosCSV/ganado enfermo CSVs'  
-    imagenes = []
-    imagenes_escaladas = []
+
     
     directorio = os.fsencode(path_directorio_archivos)
 
@@ -39,6 +42,18 @@ def main():
         imagenes.append(imagen)
         imagenes_escaladas.append(imagen_escalada)
 
+def descomprimir():
+    path_directorio_archivos = 'C:/Users/LFCIR/Documents/ST0245-001/proyecto/datasets/archivosCSV/ganado enfermo CSVs'  
+    
+    directorio = os.fsencode(path_directorio_archivos)
+
+    for archivo in os.listdir(directorio):
+        nombre_archivo = os.fsdecode(archivo) + ".csv"
+        for imagen_escalada in imagenes_escaladas:
+            imagen_des = np.savetxt(nombre_archivo, imagen_escalada , fmt = '%s', delimiter=',') 
+            imagenes_des.append(imagen_des)
+
 
 if __name__ == "__main__":
     main()
+    descomprimir()
