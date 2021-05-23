@@ -1,11 +1,12 @@
+  
 import os
 import pandas as pd
 import numpy as np
 import cv2
 
-imagenes = []
+
 imagenes_escaladas = []
-imagenes_des = []
+
 
 def leer_archivo(path_archivo):
     """
@@ -37,9 +38,13 @@ def main():
         path_archivo = path_directorio_archivos + '/' + nombre_archivo
         imagen = leer_archivo(path_archivo)
         imagen = np.uint8(imagen)
+        cv2.imshow('original', imagen)
         imagen_escalada = cv2.resize(imagen, (0, 0), fx=0.5, fy=0.5, interpolation=cv2.INTER_NEAREST)
+        cv2.imshow('escalada', imagen_escalada)
 
-        imagenes.append(imagen)
+        cv2.waitKey()
+
+        
         imagenes_escaladas.append(imagen_escalada)
 
 def descomprimir():
@@ -49,9 +54,12 @@ def descomprimir():
 
     for archivo in os.listdir(directorio):
         nombre_archivo = os.fsdecode(archivo) + ".csv"
-        for imagen_escalada in imagenes_escaladas:
-            imagen_des = np.savetxt(nombre_archivo, imagen_escalada , fmt = '%s', delimiter=',') 
-            imagenes_des.append(imagen_des)
+        
+    for imagen_escalada in imagenes_escaladas:
+        imagen_des= cv2.resize(imagen_escalada, (0, 0), fx=2, fy=2, interpolation=cv2.INTER_NEAREST)
+        imagen_descsv = np.savetxt(nombre_archivo, imagen_des , fmt = '%s', delimiter=',') 
+        
+        print(imagen_descsv)
 
 
 if __name__ == "__main__":
